@@ -1,5 +1,327 @@
+@font-face {
+  font-family: Druk Medium;
+  src: url(fonts/Druk-Medium.woff);
+}
+@font-face {
+  font-family: Amarelinha Bold;
+  src: url(fonts/Amarelinha-Bold.woff);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
 body {
-    background-color: #000;
+  line-height: 1;
 }
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* COLOR */
+/* TYPOGRAPHY */
+/* SIZES */
+body {
+  background-color: white;
+  font-family: Arial;
+  font-size: 18px;
+  color: #585858;
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 90px;
+  font-family: Druk Medium;
+}
+
+a {
+  font-family: Druk Medium;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+div.borders .top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 100%;
+  background-color: black;
+}
+div.borders .right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 100%;
+  background-color: black;
+}
+div.borders .bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 12px;
+  width: 100%;
+  background-color: black;
+}
+div.borders .left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 100%;
+  background-color: black;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+header img.logo {
+  height: 130px;
+}
+header div.join-us {
+  position: relative;
+}
+header div.join-us p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-family: Druk Medium;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+header div.join-us img.blinker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -24px;
+  width: 74px;
+  transition: opacity 0.2s ease;
+}
+header div.join-us img.blinker-two {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  margin-top: 42px;
+  width: 74px;
+  transition: opacity 0.2s ease;
+}
+
+section.hero {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+section.hero div {
+  width: 50vw;
+}
+section.hero div.left {
+  background-image: url(img/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.hero div.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section.hero div.right h1 {
+  font-family: Druk Medium;
+  text-transform: uppercase;
+  font-size: 90px;
+  text-align: center;
+  max-width: 520px;
+  color: white;
+  z-index: 2;
+}
+section.hero div.right p {
+  margin-top: 60px;
+  text-align: center;
+  padding: 0 60px;
+}
+section.hero div.right a.hero-lg-btn {
+  width: 80%;
+  display: inline-block;
+  padding: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+section.hero div.right a.hero-lg-btn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+section.hero div.right div.hero-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+section.hero div.right div.hero-title img {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+section.hero div.right div.title-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.about {
+  padding: 240px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+section.about div.about-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 80px;
+}
+section.about div.about-title div.about-title--wrap {
+  position: relative;
+}
+section.about div.about-title div.about-title--wrap h1 {
+  color: white;
+  padding: 12px 20px 0 20px;
+}
+section.about div.about-title div.about-title--wrap img {
+  width: 400px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+section.about p {
+  max-width: 730px;
+  text-align: center;
+}
+section.about p.m-btn-sm {
+  margin-bottom: 30px;
+}
+section.about img.halo {
+  margin-bottom: 20px;
+}
+
+section.call-to--action {
+  height: 60vw;
+  width: 100vw;
+  color: white;
+  background-image: url(img/bg-xl.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+section.call-to--action div.action-title {
+  position: relative;
+  width: 100%;
+}
+section.call-to--action div.action-title h1 {
+  text-transform: uppercase;
+  font-size: 74px;
+  max-width: 540px;
+  text-align: center;
+  margin: auto;
+}
+section.call-to--action div.action-title h1 span {
+  font-family: Amarelinha Bold;
+}
+section.call-to--action div.action-title img.blinker-white {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -45px;
+  width: 77px;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=app.css.map */
