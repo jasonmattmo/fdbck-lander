@@ -255,6 +255,7 @@ section.hero div.left {
   background-position: center;
   background-repeat: no-repeat;
   width: 50vw;
+  height: 100vh;
   position: relative;
 }
 section.hero div.left div.coming-soon {
