@@ -224,8 +224,25 @@ section.hero {
                 -ms-transform: rotate(-2deg);
                     transform: rotate(-2deg);
 
+                @media (max-width: 520px) {
+                    bottom: 30px;
+                    left: 50%;
+                    background-color: white;
+                    width: 80%;
+                    padding: 10px;
+                    color: #000;
+                    -webkit-transform: rotate(-2deg) translateX(-50%);
+                    -ms-transform: rotate(-2deg);
+                    transform: rotate(-2deg) translateX(-50%);
+                }
+
             p {
                 font-size: 14px;
+                text-align: center;
+
+                @media (max-width: 520px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -234,6 +251,11 @@ section.hero {
             bottom: 100px;
             left: 330px;
             width: 36px;
+
+            @media (max-width: 520px) {
+                bottom: 80px;
+                left: 50%;
+            }
         }
 
         @media (max-width: 1000px) {

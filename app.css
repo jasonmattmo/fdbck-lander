@@ -271,14 +271,39 @@ section.hero div.left div.coming-soon {
   -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
 }
+@media (max-width: 520px) {
+  section.hero div.left div.coming-soon {
+    bottom: 30px;
+    left: 50%;
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    color: #000;
+    -webkit-transform: rotate(-2deg) translateX(-50%);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg) translateX(-50%);
+  }
+}
 section.hero div.left div.coming-soon p {
   font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 520px) {
+  section.hero div.left div.coming-soon p {
+    font-size: 12px;
+  }
 }
 section.hero div.left img.arrow-curved {
   position: absolute;
   bottom: 100px;
   left: 330px;
   width: 36px;
+}
+@media (max-width: 520px) {
+  section.hero div.left img.arrow-curved {
+    bottom: 80px;
+    left: 50%;
+  }
 }
 @media (max-width: 1000px) {
   section.hero div.left {
