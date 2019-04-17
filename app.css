@@ -75,6 +75,14 @@ input, textarea, select {
 /* COLOR */
 /* TYPOGRAPHY */
 /* SIZES */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   background-color: white;
   font-family: Arial;
@@ -168,6 +176,7 @@ header div.join-us img.blinker {
   margin-top: -24px;
   width: 74px;
   transition: opacity 0.2s ease;
+  animation: blink 1s ease infinite;
 }
 header div.join-us img.blinker-two {
   position: absolute;
@@ -177,6 +186,7 @@ header div.join-us img.blinker-two {
   margin-top: 42px;
   width: 74px;
   transition: opacity 0.2s ease;
+  animation: blink 1s ease infinite;
 }
 
 section.hero {
@@ -184,20 +194,43 @@ section.hero {
   width: 100vw;
   display: flex;
 }
+@media (max-width: 1000px) {
+  section.hero {
+    flex-direction: column;
+    height: 100%;
+  }
+}
 section.hero div {
   width: 50vw;
+}
+@media (max-width: 1000px) {
+  section.hero div {
+    width: 100vw;
+  }
 }
 section.hero div.left {
   background-image: url(img/hero-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 50vw;
+}
+@media (max-width: 1000px) {
+  section.hero div.left {
+    width: 100vw;
+    height: 60vw;
+  }
 }
 section.hero div.right {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+@media (max-width: 1000px) {
+  section.hero div.right {
+    width: 100vw;
+  }
 }
 section.hero div.right h1 {
   font-family: Druk Medium;
@@ -208,10 +241,26 @@ section.hero div.right h1 {
   color: white;
   z-index: 2;
 }
+@media (max-width: 1000px) {
+  section.hero div.right h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 530px) {
+  section.hero div.right h1 {
+    font-size: 70px;
+    max-width: 500px;
+  }
+}
 section.hero div.right p {
   margin-top: 60px;
   text-align: center;
   padding: 0 60px;
+}
+@media (max-width: 530px) {
+  section.hero div.right p {
+    padding: 0 30px;
+  }
 }
 section.hero div.right a.hero-lg-btn {
   width: 80%;
@@ -221,6 +270,11 @@ section.hero div.right a.hero-lg-btn {
   position: relative;
   text-align: center;
   color: white;
+}
+@media (max-width: 1000px) {
+  section.hero div.right a.hero-lg-btn {
+    display: none;
+  }
 }
 section.hero div.right a.hero-lg-btn img {
   width: 100%;
@@ -242,6 +296,17 @@ section.hero div.right div.hero-title img {
   left: 50%;
   z-index: -1;
   transform: translateX(-50%);
+  width: 490px;
+}
+@media (max-width: 1000px) {
+  section.hero div.right div.hero-title img {
+    width: 420px;
+  }
+}
+@media (max-width: 530px) {
+  section.hero div.right div.hero-title img {
+    width: 370px;
+  }
 }
 section.hero div.right div.title-wrap {
   flex: 1;
@@ -251,11 +316,22 @@ section.hero div.right div.title-wrap {
 }
 
 section.about {
-  padding: 240px 0;
+  padding: 240px 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  section.about {
+    padding: 200px 30px;
+  }
+}
+@media (max-width: 530px) {
+  section.about {
+    padding: 120px 30px 180px 30px;
+  }
 }
 section.about div.about-title {
   display: flex;
@@ -270,6 +346,12 @@ section.about div.about-title div.about-title--wrap {
 section.about div.about-title div.about-title--wrap h1 {
   color: white;
   padding: 12px 20px 0 20px;
+  font-size: 90px;
+}
+@media (max-width: 530px) {
+  section.about div.about-title div.about-title--wrap h1 {
+    font-size: 70px;
+  }
 }
 section.about div.about-title div.about-title--wrap img {
   width: 400px;
@@ -278,6 +360,12 @@ section.about div.about-title div.about-title--wrap img {
   top: 0;
   left: 0;
   z-index: -1;
+}
+@media (max-width: 530px) {
+  section.about div.about-title div.about-title--wrap img {
+    width: 289px;
+    height: 98px;
+  }
 }
 section.about p {
   max-width: 730px;
@@ -288,6 +376,56 @@ section.about p.m-btn-sm {
 }
 section.about img.halo {
   margin-bottom: 20px;
+}
+section.about img.watermelon {
+  position: absolute;
+  top: 350px;
+  left: 10%;
+}
+@media (max-width: 630px) {
+  section.about img.watermelon {
+    display: none;
+  }
+}
+section.about img.phone {
+  position: absolute;
+  top: 350px;
+  right: 10%;
+}
+@media (max-width: 630px) {
+  section.about img.phone {
+    display: none;
+  }
+}
+section.about img.knife-fork {
+  position: absolute;
+  bottom: 90px;
+  left: 20%;
+}
+@media (max-width: 1000px) {
+  section.about img.knife-fork {
+    bottom: 28px;
+  }
+}
+@media (max-width: 630px) {
+  section.about img.knife-fork {
+    display: none;
+  }
+}
+section.about img.bread {
+  position: absolute;
+  bottom: 100px;
+  right: 20%;
+}
+@media (max-width: 1000px) {
+  section.about img.bread {
+    bottom: 20px;
+  }
+}
+@media (max-width: 630px) {
+  section.about img.bread {
+    display: none;
+  }
 }
 
 section.call-to--action {
@@ -300,10 +438,28 @@ section.call-to--action {
   background-size: cover;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 630px) {
+  section.call-to--action {
+    height: 100vh;
+  }
+}
+section.call-to--action img.underline-large {
+  width: 452px;
+}
+@media (max-width: 630px) {
+  section.call-to--action img.underline-large {
+    width: 320px;
+  }
 }
 section.call-to--action div.action-title {
   position: relative;
   width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 30px;
 }
 section.call-to--action div.action-title h1 {
   text-transform: uppercase;
@@ -322,6 +478,60 @@ section.call-to--action div.action-title img.blinker-white {
   margin-top: -45px;
   width: 77px;
   transform: translateX(-50%);
+}
+section.call-to--action div.action-title img.blinker-white--two {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  margin-bottom: -40px;
+  width: 77px;
+}
+section.call-to--action div.email-us {
+  position: relative;
+}
+section.call-to--action div.email-us p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+  transform: translate(-50%, -50%);
+  font-family: Druk Medium;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+footer {
+  display: flex;
+  padding: 60px;
+  justify-content: space-between;
+}
+footer div.footer-email {
+  width: 50%;
+  position: relative;
+}
+footer div.footer-email a {
+  color: black;
+  transition: color 0.2s ease;
+}
+footer div.footer-email a:hover {
+  color: #585858;
+}
+footer div.footer-email img {
+  position: absolute;
+  top: 30px;
+  left: -8px;
+  width: 130px;
+}
+footer div.footer-info {
+  max-width: 160px;
+}
+footer div.to-top img {
+  width: 20px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map */
