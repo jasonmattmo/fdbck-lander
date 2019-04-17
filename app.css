@@ -149,6 +149,11 @@ header {
   align-items: center;
   padding: 0 60px;
 }
+@media (max-width: 530px) {
+  header {
+    padding: 0 30px;
+  }
+}
 header img.logo {
   height: 130px;
 }
@@ -248,8 +253,8 @@ section.hero div.right h1 {
 }
 @media (max-width: 530px) {
   section.hero div.right h1 {
-    font-size: 70px;
-    max-width: 500px;
+    font-size: 60px;
+    max-width: 430px;
   }
 }
 section.hero div.right p {
@@ -305,7 +310,7 @@ section.hero div.right div.hero-title img {
 }
 @media (max-width: 530px) {
   section.hero div.right div.hero-title img {
-    width: 370px;
+    width: 320px;
   }
 }
 section.hero div.right div.title-wrap {
@@ -509,9 +514,19 @@ footer {
   padding: 60px;
   justify-content: space-between;
 }
+@media (max-width: 630px) {
+  footer {
+    flex-direction: column;
+  }
+}
 footer div.footer-email {
   width: 50%;
   position: relative;
+}
+@media (max-width: 630px) {
+  footer div.footer-email {
+    margin-bottom: 60px;
+  }
 }
 footer div.footer-email a {
   color: black;
@@ -528,6 +543,11 @@ footer div.footer-email img {
 }
 footer div.footer-info {
   max-width: 160px;
+}
+@media (max-width: 630px) {
+  footer div.footer-info {
+    margin-bottom: 40px;
+  }
 }
 footer div.to-top img {
   width: 20px;
