@@ -175,6 +175,7 @@ header {
 }
 header img.logo {
   height: 130px;
+  width: 64px;
 }
 header div.join-us {
   position: relative;
