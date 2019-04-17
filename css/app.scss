@@ -435,6 +435,10 @@ section.call-to--action {
             max-width: 540px;
             text-align: center;
             margin: auto;
+
+            @media (max-width: 630px) {
+                font-size: 60px;
+             }
         }
 
         h1 span {
