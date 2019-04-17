@@ -248,7 +248,7 @@ section.hero div.left img.arrow-curved {
 @media (max-width: 1000px) {
   section.hero div.left {
     width: 100vw;
-    height: 60vw;
+    height: 70vw;
   }
 }
 section.hero div.right {
@@ -271,7 +271,7 @@ section.hero div.right h1 {
   color: white;
   z-index: 2;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   section.hero div.right h1 {
     font-size: 80px;
   }
@@ -319,7 +319,7 @@ section.hero div.right div.hero-title {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 section.hero div.right div.hero-title img {
   position: absolute;
@@ -329,7 +329,7 @@ section.hero div.right div.hero-title img {
   transform: translateX(-50%);
   width: 490px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   section.hero div.right div.hero-title img {
     width: 420px;
   }
@@ -396,6 +396,42 @@ section.about div.about-title div.about-title--wrap img {
   section.about div.about-title div.about-title--wrap img {
     width: 289px;
     height: 98px;
+  }
+}
+section.about div.quote {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  position: relative;
+}
+section.about div.quote img {
+  margin-bottom: 20px;
+}
+section.about div.quote h2 {
+  font-size: 70px;
+  font-family: Druk Medium;
+  color: black;
+  text-transform: uppercase;
+  max-width: 480px;
+  text-align: center;
+}
+@media (max-width: 530px) {
+  section.about div.quote h2 {
+    font-size: 50px;
+  }
+}
+section.about div.quote h2 span {
+  font-family: Amarelinha Bold;
+}
+section.about div.quote img.underline-medium {
+  position: absolute;
+  bottom: -26px;
+  right: 40px;
+  width: 236px;
+}
+@media (max-width: 530px) {
+  section.about div.quote img.underline-medium {
+    display: none;
   }
 }
 section.about p {
