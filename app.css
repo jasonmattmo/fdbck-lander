@@ -114,6 +114,14 @@ a {
   font-size: 28px;
 }
 
+a:hover {
+  cursor: url(img/cursor.png) 10 0, pointer;
+  /* Legacy */
+  cursor: url(img/cursor.png) 10 0, pointer;
+  /* FF */
+  cursor: -webkit-image-set(url(img/cursor.png) 1x, url(img/cursor-x2.png) 2x) 10 0, auto;
+}
+
 div.borders .top {
   position: fixed;
   top: 0;
@@ -752,7 +760,11 @@ footer div.footer-info {
 }
 footer div.to-top img {
   width: 20px;
-  cursor: pointer;
+  cursor: url(img/cursor.png) 10 0, pointer;
+  /* Legacy */
+  cursor: url(img/cursor.png) 10 0, pointer;
+  /* FF */
+  cursor: -webkit-image-set(url(img/cursor.png) 1x, url(img/cursor-x2.png) 2x) 10 0, auto;
 }
 
 /*# sourceMappingURL=app.css.map */
